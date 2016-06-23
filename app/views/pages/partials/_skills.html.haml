@@ -1,0 +1,74 @@
+/ PORTFOLIO SECTION
+#dg
+  .container
+    .row.centered
+      %h4 SKILLS & MMID SET
+      %p I have experience building client projects and personal projects with the most popular languages and frameworks in the industry. There are also some main project guidelines that I like to follow in order to provide the best user and client experiences.
+      %br
+      / First Chart
+      .col-lg-4
+        %canvas#canvas{:height => "130", :width => "130"}
+        %br
+          :javascript
+            var doughnutData = [
+            		{
+            			value: 70,
+            			color:"#3498db"
+            		},
+            		{
+            			value : 30,
+            			color : "#ecf0f1"
+            		}
+            	];
+            	var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
+          %p
+            %b Design  Brand
+          %p
+            %small Websites should allow their users to accomplish their goals in a pleasant and efficient way.
+        / /col-lg-3
+        / Second Chart
+      .col-lg-4
+        %canvas#canvas2{:height => "130", :width => "130"}
+        %br
+          :javascript
+            var doughnutData = [
+            		{
+            			value: 90,
+            			color:"#3498db"
+            		},
+            		{
+            			value : 10,
+            			color : "#ecf0f1"
+            		}
+            	];
+            	var myDoughnut = new Chart(document.getElementById("canvas2").getContext("2d")).Doughnut(doughnutData);
+          %p
+            %b Web Development
+          %p
+            %small With users visiting websites from devices of all sizes, a website must be optimized across all devices.
+        / /col-lg-3
+        / Third Chart
+      .col-lg-4
+        %canvas#canvas3{:height => "130", :width => "130"}
+        %br
+          :javascript
+            var doughnutData = [
+            		{
+            			value: 50,
+            			color:"#3498db"
+            		},
+            		{
+            			value : 50,
+            			color : "#ecf0f1"
+            		}
+            	];
+            	var myDoughnut = new Chart(document.getElementById("canvas3").getContext("2d")).Doughnut(doughnutData);
+          %p
+            %b Modern Browser Compatible
+          %p
+            %small A website should provide the same experience and be compatible across all modern browsers.
+      / /col-lg-3
+      / third Chart
+    / row
+  / container
+/ DG

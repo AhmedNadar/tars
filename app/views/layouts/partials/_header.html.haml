@@ -1,0 +1,24 @@
+/ Fixed navbar
+.navbar.navbar-inverse.navbar-fixed-top
+  .container
+    .navbar-header
+      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to root_path, class: "navbar-brand" do
+        AHMED
+    .navbar-collapse.collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li{:class => active_class('/pages')}
+          = link_to 'HOME', root_path
+        %li{:class => active_class('/pages')}
+          = link_to 'ABOUT', page_path('about')
+        %li{:class => active_class('/pages')}
+          = link_to 'SERVICES', page_path('services')
+        %li{:class => active_class('/pages')}
+          = link_to 'PROJECTS', page_path('projects')
+        %li{:class => active_class('/pages')}
+          %a{"data-target" => "#myModal", "data-toggle" => "modal", :href => "#myModal"}
+            %i.fa.fa-envelope-o
+    / /.nav-collapse

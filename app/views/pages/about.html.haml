@@ -1,0 +1,15 @@
+%article.about
+  = provide(:title, "About")
+  #blue
+    .container
+      .row.centered
+        .col-lg-8.col-lg-offset-2
+          %h4 LEARN MORE ABOUT US
+      / row
+    / container
+  / bluewrap
+
+
+  = render 'pages/partials/about_team'
+  = render 'pages/partials/skills'
+  = render 'pages/partials/e_story'

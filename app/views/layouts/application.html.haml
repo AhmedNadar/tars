@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %title= full_title(yield(:title))
+    -# %meta{:content => yield :intro, :name => "description"}
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no", :name => "viewport"}
+    = render 'layouts/partials/shims'
+    = javascript_include_tag :modernizr
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    = render 'layouts/partials/header'
+    = yield
+    = render 'layouts/partials/footer'
+    = render 'layouts/partials/contact_modal'
+    -# Place JavaScript at the end of the document so the pages load faster
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true

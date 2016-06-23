@@ -1,0 +1,100 @@
+%article.projects
+  = provide(:title, "Projects")
+  #blue
+    .container
+      .row.centered
+        .col-lg-8.col-lg-offset-2
+          %h4 WE WORK HARD TO ACHIEVE EXCELLENCE
+          %p AND WE ARE HAPPY TO DO IT
+      / row
+    / container
+  / bluewrap
+
+
+  .container.desc
+    .row
+      %br/
+      %br/
+      .col-lg-6.centered
+        = image_tag asset_path('project_1.png'), class: "", alt: "Ahmed Nadar"
+      / col-lg-6
+      .col-lg-6
+        %h4 UTS on ISS
+        %p UTS IS THE FIRST SCHOOL IN ONTARIO, CANADA TO PARTICIPATE IN THE SSEP PROJECT; AND HAVE EXPERIMENT PREFORMED IN THE ISS.
+        %p
+          %i.fa.fa-circle-o
+          Mobile Design
+          %br/
+          %i.fa.fa-circle-o
+          Web Design
+          %br/
+          %i.fa.fa-circle-o
+          Front-End Development
+          %br/
+          %i.fa.fa-link
+          %a{:href => "http://www.utsoniss.com"} UTSonISS
+    / row
+    %br/
+    %br/
+    %hr/
+    %br/
+    %br/
+    .row
+      .col-lg-6.centered
+        = image_tag asset_path('project_2.png'), class: "", alt: "Ahmed Nadar"
+      / col-lg-6
+      .col-lg-6
+        %h4 W View
+        %p
+          W View Creators is where YouTube stars create magic, right here on your screen.
+          %br/
+          From the Domestic Geek’s twist on summer cocktails to LaurDIY’s easy breezy hair tips and Cookies, Cupcakes & Cardio’s decadent desserts, you’ll be inspired by these fun DIY videos.
+        %p
+          %i.fa.fa-circle-o
+          Mobile Design
+          %br/
+          %i.fa.fa-circle-o
+          Web Design
+          %br/
+          %i.fa.fa-circle-o
+          Development
+          %br/
+          %i.fa.fa-link
+          %a{:href => "http://www.wview.com"} WView
+    / row
+    %br/
+    %br/
+    %hr/
+    %br/
+    %br/
+    .row
+      .col-lg-6.centered
+        = image_tag asset_path('project_3.png'), class: "", alt: "Ahmed Nadar"
+      / col-lg-6
+      .col-lg-6
+        %h4 Lucid Science
+        %p
+          This is an educational channel with scientific videos most often explained through our birds, Lucid and Quest.
+          %br/
+          Our goal is to make concepts easier to understand through videos, interactive quizzes & materials.
+          %br/
+          More about our video Lucid Science channel
+        %p
+          %i.fa.fa-circle-o
+          Mobile Design
+          %br/
+          %i.fa.fa-circle-o
+          Web Design
+          %br/
+          %i.fa.fa-circle-o
+          Development
+          %br/
+          %i.fa.fa-link
+          %a{:href => "http://www.lucidscience.net"} Lucid Science
+    / row
+    %br/
+    %br/
+  / container
+
+
+  -# = render 'pages/partials/e_story'
