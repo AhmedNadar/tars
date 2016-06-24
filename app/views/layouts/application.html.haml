@@ -12,8 +12,9 @@
     %meta{:charset => "utf-8"}
     %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
     %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no", :name => "viewport"}
+    = favicon_link_tag 'ahmedsite.ico', type: 'image/ico', sizes: '24x24'
+
     = render 'layouts/partials/shims'
-    = javascript_include_tag :modernizr
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
