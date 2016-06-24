@@ -2,14 +2,16 @@
 #f
   .container
     .row.centered
-      %a{:href => "http://www.twitter.com/ahmednadar", alt: "Twitter", title: "Twitter" }
+      %a{:href => "http://www.twitter.com/ahmednadar", alt: "Twitter", title: "Twitter", target: "_top" }
         %i.fa.fa-twitter
-      %a{:href => "https://plus.google.com/u/0/+AhmedNadar/posts", alt: "Google+", title: "Google+" }
+      %a{:href => "https://plus.google.com/u/0/+AhmedNadar/posts", alt: "Google+", title: "Google+", target: "_top" }
         %i.fa.fa-google-plus
-      %a{:href => "http://stackoverflow.com/users/66493/egyamado", alt: "Stack Exchange", title: "Stack Exchange" }
+      %a{:href => "http://stackoverflow.com/users/66493/egyamado", alt: "Stack Exchange", title: "Stack Exchange", target: "_top" }
         %i.fa.fa-stack-exchange
-      %a{:href => "http://github.com/ahmednadar", alt: "Github", title: "Github" }
+      %a{:href => "http://github.com/ahmednadar", alt: "Github", title: "Github", target: "_top" }
         %i.fa.fa-github
+      %p
+        \&copy; #{Time.now.year} #{site_footer}
     / row
   / container
 / Footer

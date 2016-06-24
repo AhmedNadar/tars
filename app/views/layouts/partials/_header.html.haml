@@ -6,19 +6,19 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      = link_to root_path, class: "navbar-brand" do
+      = link_to site_url, class: "navbar-brand" do
         AHMED NADAR
     .navbar-collapse.collapse
       %ul.nav.navbar-nav.navbar-right
-        %li{:class => active_class('/pages')}
+        %li{class: active_class('/')}
           = link_to 'HOME', root_path
-        %li{:class => active_class('/pages')}
-          = link_to 'ABOUT', page_path('about')
-        %li{:class => active_class('/pages')}
-          = link_to 'SERVICES', page_path('services')
-        %li{:class => active_class('/pages')}
-          = link_to 'PROJECTS', page_path('projects')
-        %li{:class => active_class('/pages')}
-          %a{"data-target" => "#myModal", "data-toggle" => "modal", :href => "#myModal"}
+        %li{class: active_class('/about')}
+          = link_to 'ABOUT', about_path
+        %li{class: active_class('/services')}
+          = link_to 'SERVICES', services_path
+        %li{class: active_class('/projects')}
+          = link_to 'PROJECTS', projects_path
+        %li{class: active_class('/')}
+          = link_to "#myModal", "data-target" => "#myModal", "data-toggle" => "modal" do
             %i.fa.fa-envelope-o
     / /.nav-collapse

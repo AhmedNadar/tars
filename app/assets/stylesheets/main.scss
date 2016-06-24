@@ -81,8 +81,8 @@ a:after {
 	border-color: #2d2d2d;
 }
 
-.navbar-inverse .navbar-nav > .active > a {
-	background: #ff7878
+.navbar-inverse .navbar-nav>.active>a {
+	background-color: #ff7878
 }
 
 .navbar-inverse .navbar-brand {
@@ -198,6 +198,11 @@ a:after {
 	color: white;
 }
 
+#r .btn {
+  font-size: 2rem;
+  padding: 1rem 4rem;
+  box-shadow: 5px 5px 5px #888888;
+}
 /* Blue Wrap */
 
 #blue {

@@ -1,5 +1,5 @@
 %article.home
-  = provide(:title, "Home")
+  = content_for :page_title, 'Home'
   = render 'layouts/partials/header_wrap'
   = render 'pages/partials/a_services'
   = render 'pages/partials/b_portfolio'

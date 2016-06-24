@@ -17,4 +17,33 @@ module ApplicationHelper
   #  active if params[:category] == category.name
   # how to use it
   # check [layouts/partials/_header.html.erb]
+
+def site_footer
+  "Ahmed Nadar. Made with love in Toronto"
+end
+
+def meta_author
+  "Ahmed Nadar"
+end
+
+def meta_description
+  "Ahmed Nadar, offers consultent for web development and design"
+end
+
+def meta_keywords
+  "Web Development"
+end
+
+
+def site_url
+  if Rails.env.production?
+    # Place production URL
+    "http://http://www.ahmednadar.com/"
+  else
+    # Our dev & test URL.
+    "http://localhost:3000"
+  end
+end
+
+
 end
