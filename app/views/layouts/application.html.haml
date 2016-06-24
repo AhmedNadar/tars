@@ -1,22 +1,6 @@
 !!!
 %html
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
-    -# %title= full_title(yield(:title))
-    %title= full_title(yield(:page_title))
-
-    %meta{:content => meta_description, :name => "description"}/
-    %meta{:content => meta_author,      :name => "author"}/
-    %meta{:content => meta_keywords,    :name => "Keywords"}/
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
-    %meta{:charset => "utf-8"}
-    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
-    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no", :name => "viewport"}
-    = favicon_link_tag 'ahmedsite.ico', type: 'image/ico', sizes: '24x24'
-
-    = render 'layouts/partials/shims'
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = csrf_meta_tags
+  = render 'layouts/partials/head'
   %body
     = render 'layouts/partials/header'
     = yield

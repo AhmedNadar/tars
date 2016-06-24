@@ -38,7 +38,7 @@ end
 def site_url
   if Rails.env.production?
     # Place production URL
-    "http://http://www.ahmednadar.com/"
+    "http://www.ahmedandar.com/"
   else
     # Our dev & test URL.
     "http://localhost:3000"
