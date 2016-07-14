@@ -1,0 +1,9 @@
+- if admin_signed_in?
+  %li.dropdown
+    %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+      = current_admin.username
+      %b.caret
+    %ul.dropdown-menu
+      %li= link_to "New Article", new_article_path
+      %li= link_to "Settings", edit_admin_registration_path
+      %li= link_to " Sign out", destroy_admin_session_path, method: :delete

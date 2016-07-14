@@ -1,0 +1,22 @@
+!!!
+%html
+  = render 'layouts/partials/head'
+  %body
+    = render 'layouts/partials/header_articles'
+    %header.intro-header
+      .container
+        .row
+          .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+            .site-heading
+              %h1
+                = @article.headline.capitalize
+              %hr.small/
+              %span.subheading
+                = @article.intro
+              %p
+                %strong= @article.created_at.strftime("%m %B %Y")
+    = yield
+    = render 'layouts/partials/footer'
+    = render 'layouts/partials/contact_modal'
+    -# Place JavaScript at the end of the document so the pages load faster
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true

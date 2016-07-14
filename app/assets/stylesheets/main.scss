@@ -1,23 +1,19 @@
 /* OVERALL ASPECT */
 
 body {
-  background-color: #f2f2f2;
-    font-family: "Lato";
-    font-weight: 300;
-    font-size: 16px;
-    color: #555;
-
-    -webkit-font-smoothing: antialiased;
-    -webkit-overflow-scrolling: touch;
-
-    margin-top: 70px;
+  // background-color: #f2f2f2;
+  font-family: $font-stack-open-sans;
+  font-weight: 300;
+  font-size: 16px;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  // margin-top: 70px;
 }
 
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Raleway";
-    font-weight: 300;
-    color: #333;
+  font-weight: 300;
 }
 
 
@@ -35,12 +31,12 @@ p {
 a {
     color: #f85c37;
     word-wrap: break-word;
-
-    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
-    transition: color 0.1s ease-in, background 0.1s ease-in;
+    text-decoration: none;
+    -webkit-transition: color 0.3s ease-in;
+    -moz-transition: color 0.3s ease-in;
+    -ms-transition: color 0.3s ease-in;
+    -o-transition: color 0.3s ease-in;
+    transition: color 0.3s ease-in;
 }
 
 a:hover,
@@ -120,7 +116,7 @@ a:after {
    ========================================================================== */
 
 #headerwrap {
-	background: url('/assets/header-bg.jpg') no-repeat center top;
+	background: asset-url('header-bg.jpg') no-repeat center top;
   background-color: #5889A7;
 	margin-top: -10px;
 	padding-top:20px;
@@ -209,6 +205,7 @@ a:after {
 	background: #3498db;
 	padding-top: 35px;
 	padding-bottom: 35px;
+    margin-top: 70px;
 }
 
 #blue h4 {
@@ -223,36 +220,50 @@ a:after {
 
 
 /* Footer Wrap */
-#f {
+#footer {
 	background: #2d2d2d;
 	padding-top: 30px;
 	padding-bottom: 30px;
+  i {
+    color: #bdbdbd;
+    font-size: 30px;
+    padding: 20px;
+    &:hover {
+      color: #ff7878;
+    }
+  }
+  p.sign{
+    color: $white;
+    margin: 10px 0;
+    .fa {
+      padding: 0rem;
+      font-size: 1.8rem;
+    }
+  }
 }
 
-#f i {
-	color: #bdbdbd;
-	font-size: 30px;
-	padding: 20px;
-}
-
-#f i:hover {
-	color: #ff7878;
-}
 
 /****** SECTIONS *****/
 
 .w {
 	padding-top: 35px;
+  h4 {
+    font-weight: 700;
+  }
+  i {
+    color: #ff7878;
+    font-size: 30px;
+  }
 }
 
-.w h4 {
-	font-weight: 700;
-}
+// .w h4 {
+// 	font-weight: 700;
+// }
 
-.w i {
-	color: #ff7878;
-	font-size: 30px;
-}
+// .w i {
+// 	color: #ff7878;
+// 	font-size: 30px;
+// }
 
 
 .wb {
@@ -266,17 +277,25 @@ a:after {
 
 .desc {
 	padding-top: 35px;
+  h4 {
+    font-weight: 700;
+  }
+  i {
+    color: #ff7878;
+    font-size: 12px;
+    padding: 5px;
+  }
 }
 
-.desc h4 {
-	font-weight: 700;
-}
+// .desc h4 {
+// 	font-weight: 700;
+// }
 
-.desc i {
-	color: #ff7878;
-	font-size: 12px;
-	padding: 5px;
-}
+// .desc i {
+// 	color: #ff7878;
+// 	font-size: 12px;
+// 	padding: 5px;
+// }
 
 /***** MODAL CONTACT *****/
 .modal-content {
@@ -287,18 +306,20 @@ a:after {
 .modal-header {
 	background: #bdbdbd;
 	color: white;
+  h4 {
+    font-weight: 700;
+  }
 }
 
-.modal-header h4 {
-	font-weight: 700;
-}
+// .modal-header h4 {
+// 	font-weight: 700;
+// }
 
 .modal-body {
 	background: #f2f2f2;
-    font-family: "Lato";
-    font-weight: 300;
-    font-size: 16px;
-    color: #555;
+  font-weight: 300;
+  font-size: 16px;
+  color: #555;
 }
 
 .modal-footer {
@@ -311,34 +332,57 @@ a:after {
    ========================================================================== */
 
 .pricing-option {
-    padding-bottom: 40px;
-}
-
-.pricing-option .pricing-top {
+  padding-bottom: 40px;
+  .pricing-top {
     position: relative;
     background: #222;
     color: white;
     text-align: center;
     font-weight: bold;
-
     padding: 40px 20px 30px 20px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    .special-label {
+      display: block;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #1abc9c;
+      text-transform: uppercase;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 3px 0;
+    }
+  }
 }
 
-.pricing-option .pricing-top .special-label {
-    display: block;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #1abc9c;
-    text-transform: uppercase;
-    font-size: 15px;
-    font-weight: bold;
-    padding: 3px 0;
-}
+// .pricing-option .pricing-top {
+//     position: relative;
+//     background: #222;
+//     color: white;
+//     text-align: center;
+//     font-weight: bold;
+
+//     padding: 40px 20px 30px 20px;
+//     -webkit-box-sizing: border-box;
+//     -moz-box-sizing: border-box;
+//     box-sizing: border-box;
+// }
+
+// .pricing-option .pricing-top .special-label {
+//     display: block;
+//     width: 100%;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     background: #1abc9c;
+//     text-transform: uppercase;
+//     font-size: 15px;
+//     font-weight: bold;
+//     padding: 3px 0;
+// }
 
 .special .pricing-top {
     background: black;

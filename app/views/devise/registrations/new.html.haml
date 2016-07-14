@@ -1,0 +1,27 @@
+= content_for :page_title, "Sign Up"
+%admin.signup
+  #blue
+    .container
+      .row.centered
+        .col-lg-8.col-lg-offset-2
+          %h2 Sign up
+  %br
+  .container
+    .row
+      .col-lg-8.col-lg-offset-2
+        = render 'layouts/partials/error_messages', obj: resource
+        = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          = f.error_notification
+          .form-inputs
+            = f.input :login, required: true, autofocus: true, label: false, placeholder: "Login"
+            %br
+            = f.input :email, required: true, label: false, placeholder: "Email"
+            %br
+            = f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), label: false, placeholder: "Password"
+            %br
+            = f.input :password_confirmation, required: true, label: false, placeholder: "Password Confirmation"
+            %br
+          .form-actions
+            = f.button :submit, "Sign up"
+            = render "devise/shared/links"
+        %br

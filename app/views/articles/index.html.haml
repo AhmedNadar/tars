@@ -1,0 +1,19 @@
+= content_for :page_title, 'All articles'
+%article.articles
+  .container
+    .row
+      .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+        - @articles.each do |article|
+          .article-preview
+            = link_to article_path(article) do
+              %h2.article-title
+                = article.headline.capitalize
+              %h3.article-subtitle
+                = article.intro
+            %p.article-meta
+              %i.fa.fa-clock-o
+              Published on
+              %strong= article.created_at.strftime("%m %B %y ")
+          %hr
+
+

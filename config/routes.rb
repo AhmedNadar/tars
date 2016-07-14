@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-  # root to: 'pages#home', id: 'home' is set in /initializer/high_voltage.rb
-  # get "/pages/*id" => 'pages#show', as: :page, format: false
-  
-  get '/about'     => 'high_voltage/pages#show', id: 'about'
-  get '/services'  => 'high_voltage/pages#show', id: 'services'
-  get '/projects'  => 'high_voltage/pages#show', id: 'projects'
+  devise_for :admins, :path => '', :path_names => {:sign_in => 'getin', :sign_out => 'logout', :sign_up => 'ahlan_tars'}
+  resources :articles
+
+  get 'about'     => 'pages#about'
+  get 'services'  => 'pages#services'
+  get 'projects'  => 'pages#projects'
 end

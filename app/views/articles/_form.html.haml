@@ -1,0 +1,17 @@
+= simple_form_for @article, html: { class: 'form-horizontal', multipart: true } do |f|
+  = f.error :base
+  - if @article.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@article.errors.count, "error")} prohibited this article from being saved:"
+      %ul
+        - @article.errors.full_messages.each do |msg|
+          %li= msg
+
+  = f.input :headline, label: false, autofocus: true, required: true, placeholder: "article Headlines *"
+  = f.input :intro, label: false, required: true, placeholder: "article Intro *" , input_html: {rows: 5 }, hint: "Used for description META tag, try to keep to under 160 characters."
+  = f.input :body, as: :text, label: false,required: true, placeholder: "article Body *", input_html: {rows: 20 }
+  = f.error :base
+  .actions
+    = f.submit 'Save', class: "btn btn-success"
+  %br/
+  %br/
