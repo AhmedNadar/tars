@@ -1,5 +1,5 @@
 / FOOTER
-#f
+#footer
   .container
     .row.centered
       %a{:href => "http://www.twitter.com/ahmednadar", alt: "Twitter", title: "Twitter", target: "_top" }
@@ -10,8 +10,10 @@
         %i.fa.fa-stack-exchange
       %a{:href => "http://github.com/ahmednadar", alt: "Github", title: "Github", target: "_top" }
         %i.fa.fa-github
-      %p
-        \&copy; #{Time.now.year} #{site_footer}
+      %p.sign
+        \&copy; #{Time.now.year} Ahmed Nadar. Made with
+        %i.fa.fa-heart
+        love in Toronto
     / row
   / container
 / Footer
