@@ -1,0 +1,25 @@
+= content_for :page_title, "Login"
+%admin.login
+  #blue
+    .container
+      .row.centered
+        .col-lg-8.col-lg-offset-2
+          %h2 Log In
+  %br
+  .container
+    .row
+      .col-lg-8.col-lg-offset-2
+        = render 'layouts/partials/error_messages', obj: resource
+        = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          .form-inputs
+            = f.input :email, required: false, autofocus: true, label: false, placeholder: "Email"
+            %br
+            = f.input :login, required: false, autofocus: true, label: false, placeholder: "Login"
+            %br
+            = f.input :password, required: false, label: false, placeholder: "Password"
+            %br
+            = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+          .form-actions
+            = f.button :submit, "Log in"
+            = render "devise/shared/links"
+        %br
